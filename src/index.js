@@ -77,7 +77,7 @@ const threesixty = (container, images, options) => {
   const drag = (e) => {
     e.preventDefault()
 
-    mouseX = (e.pageX !== undefined) ? e.pageX : e.changedTouches[0].pageX
+    mouseX = (e.pageX !== undefined && e.pageX !== 0) ? e.pageX : e.changedTouches[0].pageX
 
     if (mouseX < oldMouseX) {
       previous()
